@@ -1,0 +1,31 @@
+import sys
+test=int(sys.stdin.readline())
+from collections import Counter
+number=[]
+sum=0
+for _ in range(test):
+    number.append(int(sys.stdin.readline()))
+
+for i in number:
+    sum+=i
+sum=sum/len(number)
+
+print(round(sum))
+
+if len(number)==1:
+    print(number[0])
+else:
+    number=sorted(number)
+    print(number[test//2])
+# 최빈값 찾기
+def mode(num):  
+    if test == 1:return num[0]
+    c=Counter(num).most_common(2)
+    return (c[1][0] if c[0][1] == c[1][1] else c[0][0])
+print(mode(number))
+
+if len(number)==1:
+    print("0")
+else:
+    print(max(number)-min(number))
+
