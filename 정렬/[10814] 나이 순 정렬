@@ -1,0 +1,9 @@
+test=int(input())
+person=[]
+for i in range(test):
+    a,b=input().split()
+    a=int(a)
+    person.append([a,b])
+person.sort(key=lambda x:x[0])
+for i in range(test):
+    print(person[i][0],person[i][1])
