@@ -1,0 +1,6 @@
+num=int(input())
+number=[]
+number=list(map(int,str(num)))
+number.sort(reverse=True)
+for i in number:
+    print(i,end="")
