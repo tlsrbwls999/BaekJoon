@@ -1,0 +1,9 @@
+N=int(input())
+number=[]
+for i in range(N):
+    a,b=map(int,input().split(" "))
+    number.append([a,b])
+    
+number.sort()
+for i in range(N):
+    print(number[i][0],number[i][1])
