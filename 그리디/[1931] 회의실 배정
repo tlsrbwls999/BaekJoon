@@ -1,0 +1,26 @@
+N=int(input())
+time=list()
+count=0
+end=0
+for i in range(N):
+    first,final=map(int,input().split(" "))
+    time.append([first,final])
+
+time=sorted(time,key=lambda x:x[0])
+time=sorted(time,key=lambda x:x[1])
+
+for i,j in time:
+    if i>=end:
+        count+=1
+        end=j
+        
+print(count)
+
+    
+
+
+
+
+    
+
+        
