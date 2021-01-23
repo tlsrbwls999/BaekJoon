@@ -1,0 +1,11 @@
+N=int(input())
+num=list(map(int,input().split(" ")))
+
+num.sort()
+result=0
+number=0
+for i in num:
+    number+=i
+    result+=number
+
+print(result)
