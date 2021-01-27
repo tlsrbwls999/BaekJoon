@@ -1,0 +1,15 @@
+count=1
+result=0
+while  True:
+    L,P,V=map(int,input().split(" "))
+    if L+P+V==0:
+        break
+    a=V%P
+    b=V//P
+    result=b*L+min(a,L)
+    print("Case "+str(count)+": "+str(result))
+    count+=1
+
+
+
+    
