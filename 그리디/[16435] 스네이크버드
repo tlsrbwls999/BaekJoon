@@ -1,0 +1,9 @@
+num,width=map(int,input().split())
+fruit=list(map(int,input().split()))
+fruit.sort()
+
+for i in fruit:
+    if width>=i:
+        width+=1        
+
+print(width)
