@@ -1,0 +1,6 @@
+sun,water=map(int,input().split())
+
+if sun>=water:
+    print(sun+water//10+water)
+else:
+    print(water+sun//10+sun)
