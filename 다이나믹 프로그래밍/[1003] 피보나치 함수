@@ -1,0 +1,31 @@
+def fibo(a):
+    num=list()
+    num.append([1,0])
+    num.append([0,1])
+    temp=a
+
+    for i in range(41):
+        num.append([num[i][0]+num[i+1][0],num[i][1]+num[i+1][1]])
+        
+    if temp==0:
+        print(num[0][0],num[0][1])
+
+    elif temp==1:
+        print(num[1][0],num[1][1])
+    elif  temp>1:
+        print(num[temp][0],num[temp][1])
+
+
+
+test=int(input())
+for _ in range(test):
+    b=int(input())
+    fibo(b)
+
+    
+
+
+
+
+
+
