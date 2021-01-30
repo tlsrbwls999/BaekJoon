@@ -1,0 +1,11 @@
+N=int(input())
+num=list()
+num.append(0)
+num.append(1)
+num.append(2)
+
+for i in range(3,N+1):
+    a=(num[i-2]+num[i-1])%15746
+    num.append(a)
+    
+print(num[N])
