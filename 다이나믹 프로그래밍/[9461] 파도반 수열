@@ -1,0 +1,17 @@
+test=int(input())
+num=[0 for _ in range (100000)]
+num[1]=num[2]=num[3]=1
+num[4]=num[5]=2
+num[6]=3
+num[7]=4
+num[8]=5
+num[9]=7
+
+for i in range(test):
+    N=int(input())
+    if N<=9:
+        print(num[N])
+    else:
+        for i in range(10,N+1):
+            num[i]=num[i-1]+num[i-5]
+        print(num[N])
