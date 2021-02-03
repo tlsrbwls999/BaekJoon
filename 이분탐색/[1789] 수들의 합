@@ -1,0 +1,13 @@
+S=int(input())
+
+N=0
+
+for i in range(4294967295):
+    N+=i
+    if N>S:
+        print(i-1)
+        break
+    elif N==S:
+        print(i)
+        break
+
