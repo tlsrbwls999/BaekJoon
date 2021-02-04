@@ -1,0 +1,20 @@
+N,M=map(int,input().split())
+
+name=set()
+unname=set()
+
+for i in range(N):
+    a=input()
+    name.add(a)
+for i in range(M):
+    b=input()
+    unname.add(b)
+
+result=sorted(list(name&unname))
+print(len(result))
+for i in result:
+    print(i)
+    
+
+
+
