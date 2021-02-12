@@ -1,0 +1,36 @@
+import sys
+crane_num=int(input())
+crane=list(map(int,input().split()))
+box_num=int(input())
+box=list(map(int,input().split()))
+
+if max(crane)<max(box):
+    print(-1)
+    sys.exit()
+
+crane.sort(reverse=True)
+box.sort(reverse=True)
+
+positions=[0]*crane_num
+checked=[False]*box_num
+
+result=0
+count=0
+
+while True:
+    if count==len(box):
+        break
+    for i in range(crane_num):
+        while positions[i]<len(box):
+            if not checked[positions[i]] and crane[i]>=box[positions[i]]:
+                checked[positions[i]]=True
+                positions[i]+=1
+                count+=1
+                break
+            positions[i]+=1
+    result+=1
+
+
+print(result)
+
+            
