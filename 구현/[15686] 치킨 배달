@@ -1,0 +1,26 @@
+from itertools import combinations
+n,m=map(int,input().split())
+city=[list(map(int,input().split())) for _ in range(n)]
+
+home=list()
+chicken=list()
+for i in range(n):
+    for j in range(n):
+        if city[i][j]==2:
+            chicken.append([i,j])
+        elif city[i][j]==1:
+            home.append([i,j])
+
+count=list(combinations(chicken,m))
+result=[0]*len(count)
+
+for x,y in home:
+    for j in range(len(count)):
+        temp=100
+        for a,b in count[j]:
+            temp=min(temp,abs(a-x)+abs(b-y))
+        result[j]+=temp
+
+print(min(result))
+
+#combinations를 떠올리면 쉽게 해결할 수 있었던 것 같다
